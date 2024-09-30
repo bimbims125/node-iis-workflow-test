@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Build application
-        run: npm install && npm run build
+      - name: Install depedencies application
+        run: npm install
       - name: Copy files to IIS
         run: copy build\* C:\inetpub\wwwroot\test-node-iis
