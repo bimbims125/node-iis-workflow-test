@@ -22,17 +22,11 @@ jobs:
 
       - name: Copy files to IIS server
         run: |
-          $iisPath = "D:\Programming\test-iis-node"
+          # Ubah sesuai lokasi folder di IIS
+          $iisPath = "\\inetpub\wwwroot\test-node-iis"
 
-          # Cek apakah folder ada, jika ya, hapus semua isinya
-          if (Test-Path $iisPath) {
-              Get-ChildItem -Path $iisPath -Recurse | Remove-Item -Recurse -Force
-          }
-
-          # Sekarang salin file baru ke folder tujuan
-          Copy-Item -Path .\* -Destination $iisPath -Recurse -Force
-
-
+          # Salin file ke server IIS
+          Copy-Item -Path * -Destination $iisPath -Recurse -Force
 
       - name: Restart IIS
         run: |
