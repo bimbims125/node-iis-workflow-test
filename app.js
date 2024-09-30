@@ -9,6 +9,13 @@ app.get('/', async (req, res)=>{
     }
   )
 })
+app.get('/test-webhook', async (req, res)=>{
+  res.send(
+    {
+      message: 'Ini hanya untuk test webhook'
+    }
+  )
+})
 
 app.listen(process.env.PORT, ()=>{
   console.log(`Success ${port}`)
