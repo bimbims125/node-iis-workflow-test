@@ -23,7 +23,7 @@ jobs:
       - name: Copy files to IIS server
         run: |
           # Ubah sesuai lokasi folder di IIS
-          $iisPath = "\\inetpub\wwwroot\test-node-iis"
+          $iisPath = "C:\inetpub\wwwroot\test-node-iis"
 
           # Salin file ke server IIS
           Copy-Item -Path * -Destination $iisPath -Recurse -Force
