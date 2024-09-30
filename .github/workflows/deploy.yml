@@ -3,7 +3,7 @@ name: Deploy to IIS
 on:
   push:
     branches:
-      - main  # Jalankan pipeline saat ada push ke branch `main`
+      - master # Jalankan pipeline saat ada push ke branch `main`
 
 jobs:
   deploy:
