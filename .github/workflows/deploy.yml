@@ -23,6 +23,11 @@ jobs:
       - name: Copy files to IIS server
         run: |
           $iisPath = "D:\Programming\test-iis-node"
+
+          # Hapus semua file dan folder di dalam folder tujuan
+          Remove-Item -Path $iisPath\* -Recurse -Force
+
+          # Sekarang salin file baru
           Copy-Item -Path * -Destination $iisPath -Recurse -Force
 
       - name: Restart IIS
