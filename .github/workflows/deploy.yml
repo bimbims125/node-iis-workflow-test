@@ -30,7 +30,8 @@ jobs:
           }
 
           # Sekarang salin file baru ke folder tujuan
-          Copy-Item -Path * -Destination "$iisPath\*" -Recurse -Force
+          Copy-Item -Path .\* -Destination $iisPath -Recurse -Force
+
 
 
       - name: Restart IIS
