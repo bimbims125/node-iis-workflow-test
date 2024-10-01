@@ -1,9 +1,10 @@
 name: Deploy to IIS
 
 on:
-  push:
-    branches:
-      - master  # Ganti dengan nama branch yang Anda gunakan
+  workflow_dispatch:
+                  push:
+                    branches:
+                      - master  # Ganti dengan nama branch yang Anda gunakan
 
 jobs:
   deploy:

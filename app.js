@@ -5,7 +5,7 @@ const app = express()
 app.get('/', async (req, res)=>{
   res.send(
     {
-      message: 'Success Parahh'
+      message: 'Success test webhook'
     }
   )
 })
