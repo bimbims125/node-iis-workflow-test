@@ -21,15 +21,11 @@ app.get('/', async (req, res) => {
     });
   });
 });
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 2b2e1dd35dbe0f53e6c4c50c703ef6f2e119c989
 app.get('/test-webhook', async (req, res)=>{
   res.send(
     {
-      message: 'Ini hanya untuk test webhook #4'
+      message: 'Ini hanya untuk test sajaaaa'
     }
   )
 })
