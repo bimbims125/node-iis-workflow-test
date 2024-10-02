@@ -8,7 +8,7 @@ app.get('/', async (req, res) => {
   exec('whoami', (error, stdout, stderr) => {
     if (error) {
       console.error(`exec error: ${error}`);
-      return res.status(500).send({ message: 'Error executing command' });
+      return res.status(500).send({ message: 'Error executing command cuy' });
     }
 
     if (stderr) {
@@ -21,6 +21,11 @@ app.get('/', async (req, res) => {
     });
   });
 });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2b2e1dd35dbe0f53e6c4c50c703ef6f2e119c989
 app.get('/test-webhook', async (req, res)=>{
   res.send(
     {
